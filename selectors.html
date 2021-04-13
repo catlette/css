@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>CSS Selectors</title>
     <link href="selectors.css" rel="stylesheet" />
   </head>
+  
   <body>
 
-    <h1>This is the title</h1>
+    <h1 id="site-title" class="excellent-text big-text">This is the title</h1>
 
-    <div>
-      First div
+    <div class="excellent-text">
+      <br>First div
+      <a href="#bookmarked-section">Jump to bookmarked section [need an ID selector to do this, can't use a class]</a>
       <p>First div's paragraph</p>
     </div>
 
-    <div>
+    <div class="excellent-text">
       Second div
-      <p>Second div's paragraph</p>
+      <p class ="something">Second div's paragraph</p>
     </div>
 
-    <div>
+    <div id="bookmarked-section">
       Third div
-      <p>Third div's paragraph</p>
+      <p>Third div's paragraph <span class="special-span"><br>span text- this won't change because this div is not a decendent of the excellent-text class</span></p>
     </div>
 
     <div>
       Fourth div
-      <p>Fourth div's paragraph</p>
+      <p>Fourth div's paragraph: the 'p' element is nested within the 'div' element so it is a decendent of 'div'</p>
+    </div>
+
+    <div class="excellent-text">
+      Fifth div
+      <p>Fifth div's paragraph<span class="special-span">span text</span></p>
     </div>
 
     <div>
-      Fifth div
-      <p>Fifth div's paragraph</p>
+      Sixth div
+      <p>Sixth div's paragraph</p>
+    </div>
+
+    <div>
+      Seventh div
+      <p>Seventh div's paragraph</p>
+    </div>
+
+    <div>
+      Eighth div
+      <p>Eight div's paragraph</p>
     </div>
 
   </body>
+
 </html>

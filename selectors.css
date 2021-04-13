@@ -1,0 +1,99 @@
+/* Notes for Tuesday, April 13th */
+
+
+/* Element Selectors */
+
+p {
+    background-color: darkorchid;
+}
+
+div {
+    border: 5px dashed lawngreen;
+}
+
+/* Class Selectors: Mechanism that allows styling to be more precise, class is an attribute we can add to css(?) elements */
+
+.excellent-text {
+    color: firebrick;
+    font-size: 20px;
+}
+
+.big-text {
+    color: lightskyblue;
+    font-size: 48px;
+}
+
+.something {
+    color: dimgrey;
+}
+
+/* ID Selector: should be unique for each element and only assigned to 1 element, very specific(?) */
+
+#site-title {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* Id can provide bookmarks for things */
+
+#bookmarked-section {
+    border: 2px solid black;
+}
+
+/*
+Selectors Precision Order
+Most: ID 
+Middle: Class
+Least: Element
+*/
+
+/*
+Cominators: A and B are both CSS selectors
+    The element selector has to come first if you have one. Take mulptile selectors and combine them into a bigger selector and that bigger one is more precise than the individual ones within it
+
+The most Common Combinators (but there are more options)
+
+    AB: selects an element that matches BOTH A and B selectors
+    A B: selects a B that is a decendent of an A, it is nested within another element, this order does matter
+    A>B: selects a B that is a direct child of A
+    A+B: sibling combinations, lecture notes on this
+    A-B: sibling combinations, lecture notes on this
+    */
+
+/*AB Examples*/
+h1.excellent-text {
+    border: 3px solid lightsalmon;
+    border-radius: 10px;
+}
+
+.big-text.excellent-text {
+    border: 1px solid magenta;
+    border-radius: 5px;
+}
+
+div.excellent-text {
+    border: 3px solid lightsalmon;
+    border-radius: 10px;
+}
+
+h1, p {
+    font-weight: bold;
+}
+
+/*A B Example*/
+.excellent-text .special-span {
+    background-color: linen;
+}
+
+/*
+
+Dev (Development) Tools
+
+Right click on text then hit "Inspector"
+useful for finding elements and seeing what they look like
+you can see all the different styles (CSS) that affect this element
+can add an inline style
+can turn things on and off
+helps to explore this and you can do it with any web page
+
+*/
